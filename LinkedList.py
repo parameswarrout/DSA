@@ -17,7 +17,8 @@ class LinkedList:
             result += str(temp_node.value)
             if temp_node.next is not None:
                 result += "-->"
-            temp_node +=temp_node.next
+            temp_node =temp_node.next
+        return result
             
     def append(self, value):
         new_node = Node(value)
@@ -30,3 +31,11 @@ class LinkedList:
             self.tail = new_node
         self.length += 1
     
+    
+    
+new_linked_list = LinkedList()
+new_linked_list.append(10)
+new_linked_list.append(20)
+new_linked_list.append(30)
+new_linked_list.append(40)
+print(new_linked_list)
